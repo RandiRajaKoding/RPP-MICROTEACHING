@@ -1,0 +1,423 @@
+.gallery-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.submission-panel {
+  padding: 2rem;
+  position: sticky;
+  top: 100px;
+}
+
+.submission-panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.submission-subtitle {
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+
+.submission-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.form-group input {
+  padding: 0.75rem 1rem;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: white;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+}
+
+.input-with-icon input {
+  padding-left: 2.5rem;
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.project-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--glass-border);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.project-placeholder {
+  height: 170px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(236, 72, 153, 0.25));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.placeholder-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  color: #a5b4fc;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+.placeholder-icon {
+  opacity: 0.6;
+  color: #e2e8f0;
+}
+
+.project-info {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-info h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.student-name {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.inline-icon-user {
+  color: var(--primary);
+}
+
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-link {
+  color: #60a5fa;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s;
+}
+
+.btn-link:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.interaction-btns {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Action Buttons (Like & Comment) */
+.gallery-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.gallery-action-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Like Button Active Style */
+.like-btn:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.like-btn.active {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  color: #60a5fa;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.35);
+}
+
+.like-icon {
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.like-icon.liked {
+  fill: #3b82f6;
+  color: #3b82f6;
+  transform: scale(1.15);
+}
+
+.like-count {
+  font-weight: 600;
+}
+
+/* Comment Button Active Style */
+.comment-btn:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.comment-btn.active {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: var(--primary);
+  color: #a5b4fc;
+}
+
+/* Expandable Comments Drawer */
+.comments-section {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.comments-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comments-header h5 {
+  font-size: 0.88rem;
+  margin: 0;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.peer-badge {
+  font-size: 0.68rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.comments-list::-webkit-scrollbar {
+  width: 4px;
+}
+.comments-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.no-comments {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0.25rem 0;
+  line-height: 1.4;
+}
+
+.comment-item {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.comment-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #e2e8f0;
+  font-size: 0.76rem;
+}
+
+.comment-time {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.comment-text {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Comment Form */
+.add-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+}
+
+.comment-author-input {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  color: white;
+  font-size: 0.76rem;
+  font-family: inherit;
+}
+
+.comment-author-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.comment-input-row {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.comment-text-input {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  color: white;
+  font-size: 0.78rem;
+  font-family: inherit;
+}
+
+.comment-text-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.comment-submit-btn {
+  background: var(--primary);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 0 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.comment-submit-btn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .gallery-layout {
+    grid-template-columns: 1fr;
+  }
+  .submission-panel {
+    position: static;
+  }
+}
